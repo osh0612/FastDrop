@@ -1,0 +1,193 @@
+<html>
+<head>
+        <link rel="icon" type="image/x-icon" href="Capture.png">
+    <style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.products35 {
+    margin-top: 20px;
+}
+
+.event {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+body {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+}
+
+.submiti{
+  font-size: 18px;
+  background: black;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 3% 25px;
+  transition: 0.5s;
+  position:absolute;
+}
+.submiti:hover{
+  background: #000;
+  border: 1px solid #4070f4;
+}
+
+#clrbskt{
+font-family: Poppins;
+color:white;
+background-color:black;
+border-radius:5px;
+font-size: 25px;
+cursor: pointer;
+border-style: solid;
+border-color: grey;
+}
+
+#buy-now{
+font-family: Poppins;
+color:black;
+background-color:white;
+border-radius:5px;
+font-size: 20px;
+cursor: pointer;
+border-style: solid;
+border-color: black;
+}
+
+    </style>
+    <title>Products</title>
+</head>
+<body>
+
+    <div class="container">
+            <a href="competition.html" class="submiti">Home</a>
+        <header>
+            <h1>Products</h1>
+        </header>
+        
+        <section class="products35">
+
+            <div class="event">
+                <img src="CaptureStanley.png">
+                <h2>Stanley Insulated Mug</h2>
+                <p>Constructed of 90% recycled stainless steel for sustainable sipping, the Stanley Quencher H2.0? Flowstate™ Tumbler 40OZ helps you reach your hydration goals with fewer refills. Working, workouts, road trips — you'll want this Stanley tumbler always by your side.</p>
+		<br><h4>Only £23.50!</h4>
+               <button id="buy-now" onclick="addone()">Add To Cart</button>
+            </div>
+
+
+            <div class="event">
+                <img src="ElaFrame.jpg">
+                <h2>Ela Frame</h2>
+                <p>Expertly designed for optimal display and protection, the Ela Frame is the perfect addition to any space. With its sleek design, your prized possessions will be safe.</p>
+		<br><h4>Only £14.95!</h4>
+                <button id="buy-now" onclick="addtwo()">Add To Cart</button>
+            </div>
+            
+            <div class="event">
+                <img src="images.jpg">
+                <h2>Cult Pen</h2>
+                <p>The multipurpose pen has different writing heads at the both ends of its shaft. It may be the combination of any two of pencil, ball-point pens of different color and fountain pen of different color.</p>
+		<br><h4>Only £5.99!</h4>
+                <button id="buy-now" onclick="addthree()">Add To Cart</button>
+            </div>
+        </section>
+    </div>
+<center>
+ <div id="cart">
+        <h1>Cart</h1>
+        <table class="table-cart">
+	<tr><th><h2>Items</h2></th></tr>
+	<tr><th><h4 id="one"></h4></th></tr>
+	<tr><th><h4 id="two"></h4></th></tr>
+	<tr><th><h4 id="three"></h4></th></tr>
+        <tr><th><h2 id="total"></h2></th></tr>
+    </tr>
+</table>
+
+<button type="button" id="clrbskt" onClick="window.location.reload();">Clear Basket</button>
+<a href="https://www.amazon.com/Best-Sellers-Insulated-Cups-Mugs/zgbs/kitchen/21613422011;" ><button type="button" id="clrbskt" >Buy Now</button></a>
+
+<br><br>
+
+</div>
+</center>
+
+</body>
+
+<script>
+t = 0;
+function addone(){
+document.getElementById("one").innerHTML = "Name Of Product:    Stanley Cup - £23.50 ";
+total(23.50);
+}
+
+function addtwo(){
+document.getElementById("two").innerHTML = "Name Of Product:    Ela Frame - £14.95";
+total(14.95);
+}
+
+function addthree(){
+document.getElementById("three").innerHTML = "Name Of Product:    Cult Pen - £5.99";
+total(5.99);
+}
+
+function total(x){
+t = t + x
+document.getElementById("total").innerHTML = "Total Price: £" + t.toFixed(2);
+}
+
+
+</script>
+
+</html>
+
+
